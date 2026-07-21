@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- This file is the accessible, static portfolio prototype entry point for GitHub Pages. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A static Story Spark portfolio prototype.">
+  <title>Story Spark | Portfolio Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Portfolio prototype · Senior Product Manager case study</p>
+      <h1>Story Spark</h1>
+      <p class="lede">A small, caregiver-led way to turn a few ideas into a gentle story starter.</p>
+      <p class="notice"><strong>Prototype note:</strong> This is a static simulation, not a live AI product. Nothing is sent, saved, or collected.</p>
+    </header>
+
+    <section class="how-it-works" aria-labelledby="how-it-works-title">
+      <h2 id="how-it-works-title">How this concept keeps the caregiver in control</h2>
+      <ol>
+        <li>Choose three safe story ingredients together.</li>
+        <li>Receive a short, simulated draft.</li>
+        <li>Review and adapt it before sharing.</li>
+      </ol>
+    </section>
+
+    <section class="story-builder" aria-labelledby="builder-title">
+      <div class="section-heading">
+        <p class="eyebrow">Step 1</p>
+        <h2 id="builder-title">Choose three story sparks</h2>
+        <p>Pick the ingredients together. A caregiver can review the idea before sharing it.</p>
+      </div>
+
+      <form id="story-form" novalidate>
+        <fieldset>
+          <legend>Choose a character</legend>
+          <div class="choice-grid">
+            <label><input type="radio" name="character" value="curious fox"> Curious fox</label>
+            <label><input type="radio" name="character" value="brave little robot"> Brave little robot</label>
+            <label><input type="radio" name="character" value="gentle whale"> Gentle whale</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Choose a setting</legend>
+          <div class="choice-grid">
+            <label><input type="radio" name="setting" value="sunny garden"> Sunny garden</label>
+            <label><input type="radio" name="setting" value="cozy moon base"> Cozy moon base</label>
+            <label><input type="radio" name="setting" value="coral reef"> Coral reef</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Choose a gentle lesson</legend>
+          <div class="choice-grid">
+            <label><input type="radio" name="lesson" value="asking for help"> Asking for help</label>
+            <label><input type="radio" name="lesson" value="sharing a turn"> Sharing a turn</label>
+            <label><input type="radio" name="lesson" value="trying something new"> Trying something new</label>
+          </div>
+        </fieldset>
+
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+        <div class="actions">
+          <button type="submit">Spark an idea <span aria-hidden="true">→</span></button>
+          <button class="secondary-button" type="reset">Start over</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="result is-hidden" aria-labelledby="result-title" aria-live="polite">
+      <p class="eyebrow">Step 2</p>
+      <h2 id="result-title" tabindex="-1">A story idea to review together</h2>
+      <article class="story-card">
+        <p class="simulation-label">Simulated suggestion · generated from local templates</p>
+        <h3 id="story-title">Your story title</h3>
+        <p id="story-outline"></p>
+        <div class="review-note"><strong>Caregiver review:</strong> Read and adapt this draft before sharing. You know what feels right for your child.</div>
+      </article>
+      <p class="try-again">Want another direction? Change any choice above and spark a new idea.</p>
+    </section>
+
+    <details class="safety-note">
+      <summary>Why are the choices limited?</summary>
+      <p>This portfolio prototype uses preset choices to show one responsible-AI trade-off: less open-ended creativity in exchange for more predictable, easier-to-review suggestions. Read the <a href="../docs/risks-and-guardrails.md">risk and guardrail notes</a> for the full rationale.</p>
+    </details>
+
+    <footer>
+      <p>Story Spark is a fictional, dependency-free portfolio project. <a href="../README.md">Read the case-study materials</a>.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
